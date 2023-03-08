@@ -55,6 +55,10 @@ Este repositório também conta com alguns templates que podem ser facilmente ut
 
 </a>
 
+### v0.1.40-230308-beta
+
+- Teste de aplicação da variável de ambiente 'SUFFIX' para regras de exclusão
+
 ### v0.1.39-230308-beta
 
 - Teste de aplicação da variável de ambiente 'SUFFIX' para regras de exclusão
