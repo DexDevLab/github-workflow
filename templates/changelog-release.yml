@@ -1,16 +1,11 @@
-# AUTO GENERATE CHANGELOG FOR TAGS, ISSUES, LABELS AND PULL REQUESTS
+# AUTO GENERATE CHANGELOG FOR TAG RELEASES
 
-name: Changelog-generator
-
-# on:
-#   release:
-#     types:
-#       - created
+name: Changelog
 
 on:
-  push:
-    branches:
-      - main
+  release:
+    types:
+      - created
 
 jobs:
   changelog:
