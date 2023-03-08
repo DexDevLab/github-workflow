@@ -13,20 +13,32 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: "Getting package-json version"
-        id: package-version
-        uses: martinbeentjes/npm-get-version-action@main
-        # output: ${{ steps.package-version.outputs.current-version }}
+      - name: Checkout code
+        uses: actions/checkout@master
+
+      - name: Extract version
+        id: get-package-version
+        uses: Saionaro/extract-package-version@v1.2.1
+
+      - name: Printing package version
+        run: echo ${{ steps.get-package-version.outputs.version }}
+
       - name: "Gathering tag name removing timestamp"
         if: "!contains(steps.package-version.outputs.current-version, 'beta')"
         id: get-ver
         run: |
           ver=$(echo ${{ steps.package-version.outputs.current-version }} | cut -d- -f1)
           echo "::set-output name=ver::$ver"
-      - run: echo "${{ steps.get-ver.outputs.ver }}"
-      - if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+
+      - name: Printing tag and release version
+        run: echo "${{ steps.get-ver.outputs.ver }}"
+
+      - name: Checkout code
+        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
         uses: actions/checkout@v2
-      - if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+
+      - name: Generating Tag
+        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
         uses: Klemensas/action-autotag@stable
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
@@ -34,11 +46,11 @@ jobs:
             "${{ steps.get-ver.outputs.ver }}"
             # tag_prefix: "v"
             # tag_suffix: "b"
-      # - name: Trigger next workflow
-      #   if: "success() && !contains(steps.get-tag.outputs.tag, 'beta')"
-      #   uses: peter-evans/repository-dispatch@v1
-      #   with:
-      #     token: ${{ secrets.REPO_GHA_PAT }}
-      #     repository: ${{ github.repository }}
-      #     event-type: actions-release
-      #     client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+        # - name: Trigger next workflow
+        #   if: "success() && !contains(steps.get-tag.outputs.tag, 'beta')"
+        #   uses: peter-evans/repository-dispatch@v1
+        #   with:
+        #     token: ${{ secrets.REPO_GHA_PAT }}
+        #     repository: ${{ github.repository }}
+        #     event-type: actions-release
+        #     client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
