@@ -2,7 +2,7 @@
 # REQUIRES PACKAGE.JSON WITH "version" PROPERTY UNDER SEMANTIC VERSIONING. ADDING
 # "b" SUFFIX IN THE VERSION IN "version" PROPERTY DEFINES A BETA/TEST TAG.
 
-name: Tag
+name: Generating Tag and Release
 
 on:
   push:
@@ -34,21 +34,21 @@ jobs:
         if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         run: echo "${{ steps.get-ver.outputs.ver }}"
 
-      - name: Checkout code
-        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
-        uses: actions/checkout@v2
+      # - name: Checkout code
+      #   if: "!contains(steps.get-package-version.outputs.version, 'beta')"
+      #   uses: actions/checkout@v2
 
-      - name: Generating Tag
-        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
-        uses: Klemensas/action-autotag@stable
-        with:
-          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          version:
-            "${{ steps.get-ver.outputs.ver }}"
-            # tag_prefix: "v"
-            # tag_suffix: "b"
+      # - name: Generating Tag
+      #   if: "!contains(steps.get-package-version.outputs.version, 'beta')"
+      #   uses: Klemensas/action-autotag@stable
+      #   with:
+      #     GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      #     version:
+      #       "${{ steps.get-ver.outputs.ver }}"
+      #       # tag_prefix: "v"
+      #       # tag_suffix: "b"
 
-      - name: Generating Release
+      - name: Generating Tag and Release
         if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:
