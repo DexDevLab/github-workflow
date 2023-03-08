@@ -6,22 +6,16 @@
 <div align="center">
 
 <a href=""><img src="https://snyk.io/test/github/dexdevlab/github-workflow/badge.svg?style=plastic" height="20" alt="Snyk"></a>
-
 <a href=""><img src="https://img.shields.io/github/languages/code-size/dexdevlab/github-workflow?style=plastic" height="20" alt="CodeSize"></a>
 <a href=""><img src="https://img.shields.io/github/repo-size/dexdevlab/github-workflow?style=plastic" height="20" alt="RepoSize"></a>
-
-<!-- <a href="https://github.com/dexdevlab/ebac-engenheiro-frontend/graphs/contributors"><img src="https://img.shields.io/github/contributors/dexdevlab/ebac-engenheiro-frontend?style=plastic" height="20" alt="Contributors"></a> -->
-
-<!--
-<a href="https://github.com/dexdevlab/ebac-engenheiro-frontend/fork"><img src="https://img.shields.io/github/forks/dexdevlab/ebac-engenheiro-frontend?style=plastic" height="20" alt="Fork"></a>  -->
 
 <a href=""><img src="https://img.shields.io/github/last-commit/dexdevlab/github-workflow?style=plastic" height="20" alt="LastCommit"></a>
 <a href=""><img src="https://img.shields.io/badge/version-1.0.0-005bff?style=plastic" height="20" alt="Version"></a>
 <a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="20" alt="License"></a>
 
-|| [Conteúdo](#section-conteudo) || [Notas de versão](#section-changelog) || [Autores](#section-autores) ||
+|| [Conteúdo](#section-conteudo) || [Primeiros passos](#section-primeirospassos) || [Notas de versão](#section-changelog) ||
 
-|| [Contato](#section-contato) || [Licença](#section-licenca) ||
+|| [Autores](#section-autores) || [Contato](#section-contato) || [Licença](#section-licenca) ||
 
 </div>
 
@@ -33,7 +27,11 @@
 
 </a>
 
+<br>
+
 Este repositório serve como um sandbox para testes com workflows (Github Actions), de forma que é possível testar os mais diferentes scripts de automação, possibilitando fácil adaptação e customização para atender necessidades específicas.
+
+<br>
 
 ### Templates
 
@@ -47,6 +45,36 @@ Este repositório também conta com alguns templates que podem ser facilmente ut
 
 'tag-release' - Cria automaticamente uma Tag, e então uma release, respeitando Versionamento Semântico, de acordo com o critério especificado. No template, a ação ocorre em cada 'push' realizado no branch 'main', e ignora automaticamente quaisquer versões do projeto que possuam o sufixo '-beta'. Requer um arquivo [`package.json`](https://github.com/dexdevlab/github-workflow/blob/main/package.json) para funcionar corretamente. Em caso de se utilizar outro sufixo indicador de versão como excludente, é possível substituir a variável `SUFFIX` por qualquer outro valor.
 
+'tag+release' - Versão alternativa do script acima. Se utiliza de 2 workflows independentes que se executam de maneira procedural. Funciona também como um exemplo desse tipo de implementação. Para mais informações, leia as [instruções](https://github.com/dexdevlab/github-workflow/blob/main/templates/tag+release/readme.md) do template.
+
+<hr>
+
+<a name="section-primeirospassos">
+
+## Primeiros passos
+
+</a>
+
+<br>
+
+### Utilizando como projeto
+
+Se quiser utilizar o projeto para fazer seus próprios testes com os workflows e ainda se beneficiar dos templates, baste realizar um `git clone`:
+
+```bash
+
+git clone https://github.com/DexDevLab/github-workflow
+
+```
+
+Insira seu template no diretório '.github/workflows' e poderá ver seu funcionamento no próximo commit.
+
+<br>
+
+### Salvando os templates individualmente
+
+Você também pode ficar à vontade e baixar individualmente cada template navegando pelos arquivos no próprio repositório.
+
 <hr>
 
 <a name="section-changelog">
@@ -54,6 +82,11 @@ Este repositório também conta com alguns templates que podem ser facilmente ut
 ## Notas de versão
 
 </a>
+
+### v1.0.0-230308
+
+- Revisão da documentação
+- Ajuste na variável de ambiente 'SUFFIX' para regras de exclusão no template 'tag+release'
 
 ### v0.1.41-230308-beta
 
