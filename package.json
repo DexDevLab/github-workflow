@@ -1,6 +1,7 @@
 {
   "name": "github-workflow",
-  "version": "v0.1.37-230308",
+  "version": "v0.1.38-230308-beta",
+  "license": "MIT",
   "description": "",
   "private": true,
   "scripts": {
