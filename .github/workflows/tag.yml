@@ -31,6 +31,7 @@ jobs:
           echo "::set-output name=ver::$ver"
 
       - name: Printing tag and release version
+        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         run: echo "${{ steps.get-ver.outputs.ver }}"
 
       - name: Checkout code
