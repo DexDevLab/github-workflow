@@ -5,7 +5,7 @@ name: Release
 
 on:
   repository_dispatch:
-    types: [trigger-workflow-2]
+    types: [actions-release]
 
 jobs:
     release:
@@ -23,7 +23,9 @@ jobs:
           uses: "WyriHaximus/github-action-get-previous-tag@v1"
           with:
             fallback: 'latest'
-        - uses: "marvinpinto/action-automatic-releases@latest"
+        - name: running release creating if tag does not contain beta/test marker
+          if: ! contains(steps.gettag.outputs.tag, 'b')
+          uses: "marvinpinto/action-automatic-releases@latest"
           with:
             automatic_release_tag: "${{ steps.gettag.outputs.tag }}"
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
