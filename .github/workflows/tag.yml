@@ -18,27 +18,27 @@ jobs:
 
       - name: Extract version
         id: get-package-version
-        uses: Saionaro/extract-package-version@v1.2.1
+        uses: jaywcjlove/github-action-package@main
 
       - name: Printing package version
         run: echo ${{ steps.get-package-version.outputs.version }}
 
       - name: "Gathering tag name removing timestamp"
-        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         id: get-ver
         run: |
-          ver=$(echo ${{ steps.package-version.outputs.current-version }} | cut -d- -f1)
+          ver=$(echo ${{ steps.get-package-version.outputs.version }} | cut -d- -f1)
           echo "::set-output name=ver::$ver"
 
       - name: Printing tag and release version
         run: echo "${{ steps.get-ver.outputs.ver }}"
 
       - name: Checkout code
-        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         uses: actions/checkout@v2
 
       - name: Generating Tag
-        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
         uses: Klemensas/action-autotag@stable
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
