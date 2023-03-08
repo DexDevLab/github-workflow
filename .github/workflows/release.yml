@@ -2,9 +2,6 @@
 
 name: Release
 
-env:
-  GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-
 on:
   push:
     tags:
@@ -17,5 +14,5 @@ jobs:
       steps:
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
-            repo_token: ${env.GITHUB_TOKEN}
+            repo_token: "${{secrets.GITHUB_TOKEN}}"
             prerelease: false
