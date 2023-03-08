@@ -20,5 +20,6 @@ jobs:
             ref: ${{ github.event.client_payload.sha }}
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
+            automatic_release_tag: ""
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
             prerelease: false
