@@ -22,9 +22,9 @@ jobs:
           id: gettag
           uses: "WyriHaximus/github-action-get-previous-tag@v1"
           with:
-            fallback: latest
+            fallback: 'latest'
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
-            automatic_release_tag: "{{ steps.gettag.output.tag }}"
+            automatic_release_tag: "{{ steps.gettag.outputs.tag }}"
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
             prerelease: false
