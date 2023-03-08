@@ -6,9 +6,6 @@ name: Release
 on:
   repository_dispatch:
     types: [trigger-workflow-2]
-  push:
-    tags:
-      - 'v*'
 
 jobs:
     release:
@@ -20,6 +17,6 @@ jobs:
             ref: ${{ github.event.client_payload.sha }}
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
-            automatic_release_tag: ${{ github.event.client_payload.tag }}
+            automatic_release_tag: "latest"
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
             prerelease: false
