@@ -1,0 +1,9 @@
+{
+  "name": "github-workflow",
+  "version": "0.1.5",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
