@@ -25,6 +25,6 @@ jobs:
             fallback: 'latest'
         - uses: "marvinpinto/action-automatic-releases@latest"
           with:
-            automatic_release_tag: "{{ steps.gettag.outputs.tag }}"
+            automatic_release_tag: "${{ steps.gettag.outputs.tag }}"
             repo_token: "${{ secrets.GITHUB_TOKEN }}"
             prerelease: false
