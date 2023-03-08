@@ -27,7 +27,7 @@ jobs:
           if: "!contains(steps.get-tag.outputs.tag, 'beta')"
           id: get-ver
           run: |
-              id=$(echo ${{steps.get-tag.outputs.tag}} | cut -d- -f1)
+              ver=$(echo ${{steps.get-tag.outputs.tag}} | cut -d- -f1)
               echo "::set-output name=ver::$ver"
         - run: echo "${{steps.get-ver.outputs.ver}}"
         - name: 'Creating Release'
