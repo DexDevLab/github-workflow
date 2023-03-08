@@ -46,6 +46,14 @@ jobs:
             "${{ steps.get-ver.outputs.ver }}"
             # tag_prefix: "v"
             # tag_suffix: "b"
+
+      - name: Generating Release
+        if: "!contains(steps.get-package-version.outputs.version, 'beta')"
+        uses: "marvinpinto/action-automatic-releases@latest"
+        with:
+          automatic_release_tag: "${{ steps.get-ver.outputs.ver }}"
+          repo_token: "${{ secrets.GITHUB_TOKEN }}"
+          prerelease: false
         # - name: Trigger next workflow
         #   if: "success() && !contains(steps.get-tag.outputs.tag, 'beta')"
         #   uses: peter-evans/repository-dispatch@v1
