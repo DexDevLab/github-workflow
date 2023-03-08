@@ -24,7 +24,7 @@ jobs:
           with:
             fallback: 'latest'
         - name: running release creating if tag does not contain beta/test marker
-          if: "!contains(steps.gettag.outputs.tag, 'b')"
+          if: "!contains(steps.gettag.outputs.tag, 'beta')"
           uses: "marvinpinto/action-automatic-releases@latest"
           with:
             automatic_release_tag: "${{ steps.gettag.outputs.tag }}"
