@@ -29,9 +29,9 @@ jobs:
           uses: actions/github-script@0.9.0
           with:
               script: |
-                const ver = steps.get-tag.outputs.tag.split('-')[1]
+                const ver = steps.get-tag.outputs.tag.split('-')[0]
                 core.setOutput('ver', ver)
-              run: echo "${{steps.get-ver.outputs.ver}}"
+        - run: echo "${{steps.get-ver.outputs.ver}}"
         - name: 'Creating Release'
           if: "!contains(steps.get-tag.outputs.tag, 'beta')"
           uses: "marvinpinto/action-automatic-releases@latest"
