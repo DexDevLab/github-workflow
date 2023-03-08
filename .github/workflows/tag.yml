@@ -13,22 +13,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: "Getting package-json version"
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@main
+        # output: ${{ steps.package-version.outputs.current-version }}
+      - name: "Gathering tag name removing timestamp"
+        if: "!contains(steps.package-version.outputs.current-version, 'beta')"
+        id: get-ver
+        run: |
+          ver=$(echo ${{steps.get-tag.outputs.tag}} | cut -d- -f1)
+          echo "::set-output name=ver::$ver"
+      - run: echo "${{ steps.get-ver.outputs.ver }}"
       - uses: actions/checkout@v2
       - uses: Klemensas/action-autotag@stable
         with:
           GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
-          # tag_prefix: "v"
-          # tag_suffix: "b"
-      - name: "Get previous tag"
-        id: get-tag
-        uses: "WyriHaximus/github-action-get-previous-tag@v1"
-        with:
-          fallback: "latest"
-      - name: Trigger next workflow
-        if: "success() && !contains(steps.get-tag.outputs.tag, 'beta')"
-        uses: peter-evans/repository-dispatch@v1
-        with:
-          token: ${{ secrets.REPO_GHA_PAT }}
-          repository: ${{ github.repository }}
-          event-type: actions-release
-          client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
+          version:
+            "${{ steps.get-ver.outputs.ver }}"
+            # tag_prefix: "v"
+            # tag_suffix: "b"
+      # - name: Trigger next workflow
+      #   if: "success() && !contains(steps.get-tag.outputs.tag, 'beta')"
+      #   uses: peter-evans/repository-dispatch@v1
+      #   with:
+      #     token: ${{ secrets.REPO_GHA_PAT }}
+      #     repository: ${{ github.repository }}
+      #     event-type: actions-release
+      #     client-payload: '{"ref": "${{ github.ref }}", "sha": "${{ github.sha }}"}'
