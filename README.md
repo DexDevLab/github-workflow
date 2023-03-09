@@ -11,10 +11,10 @@
 
 <a href=""><img src="https://img.shields.io/github/languages/code-size/dexdevlab/github-workflow?style=plastic" height="20" alt="CodeSize"/></a>
 <a href=""><img src="https://img.shields.io/github/repo-size/dexdevlab/github-workflow?style=plastic" height="20" alt="RepoSize"/></a>
-<a href=""><img src="https://img.shields.io/github/contributors/frtechdev/github-repo-template?style=plastic" height="20" alt="Contributors"></a>
+<a href=""><img src="https://img.shields.io/github/contributors/dexdevlab/github-workflow?style=plastic" height="20" alt="Contributors"></a>
 
-<a href=""><img src="https://img.shields.io/github/forks/frtechdev/github-workflow?style=plastic" height="20" alt="Fork"></a>
-<a href=""><img src="https://img.shields.io/badge/version-1.0.0-140126?style=plastic" height="20" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/github/forks/dexdevlab/github-workflow?style=plastic" height="20" alt="Fork"></a>
+<a href=""><img src="https://img.shields.io/badge/version-1.0.2-140126?style=plastic" height="20" alt="Version"/></a>
 <a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="20" alt="License"/></a>
 
 || [Conteúdo](#section-conteudo) || [Primeiros passos](#section-primeirospassos) || [Notas de versão](#section-changelog) ||
@@ -98,6 +98,15 @@ Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<
 ## Notas de versão
 
 </a>
+
+### v1.0.2-230309
+
+- Atualização da documentação
+
+### v1.0.1-230309
+
+- Atualização da documentação
+- Personalização dos textos descritivos dos workflows
 
 ### v1.0.0-230308
 
