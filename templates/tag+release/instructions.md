@@ -12,7 +12,7 @@ Anote o valor do Token.
 
 ### Crie um segredo dentro do repositório
 
-Vá na lista de segredos do seu repositório('https://github.com/<NOME_DO_REPOSITORIO>/github-workflow/settings/secrets/actions') e crie um novo segredo.
+Vá na lista de segredos do seu repositório ('https://github.com/<NOME_DO_USUARIO>/<NOME_DO_REPOSITORIO>/settings/secrets/actions') e crie um novo segredo.
 O nome do segredo será 'REPO_GHA_PAT' e o valor será o valor do Token do tópico anterior.
 
 ## Funcionamento dos workflows

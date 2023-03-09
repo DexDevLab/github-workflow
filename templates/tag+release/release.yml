@@ -21,19 +21,19 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
-      - name: "Get previous tag"
+      - name: "🏷️ Get previous tag"
         id: get-tag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
         with:
           fallback: "latest"
-      - name: "Gathering release name"
+      - name: "📤 Gathering release name"
         if: "!contains(steps.get-tag.outputs.tag, env.SUFFIX)"
         id: get-ver
         run: |
           ver=$(echo ${{steps.get-tag.outputs.tag}} | cut -d- -f1)
           echo "::set-output name=ver::$ver"
       - run: echo "${{steps.get-ver.outputs.ver}}"
-      - name: "Creating Release"
+      - name: "📤 Creating Release"
         if: "!contains(steps.get-tag.outputs.tag, env.SUFFIX)"
         uses: "marvinpinto/action-automatic-releases@latest"
         with:

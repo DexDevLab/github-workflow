@@ -9,7 +9,7 @@ on:
 
 jobs:
   release:
-    name: "Release"
+    name: "📤 Release"
     runs-on: "ubuntu-latest"
     steps:
       - uses: "marvinpinto/action-automatic-releases@latest"
