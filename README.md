@@ -1,25 +1,25 @@
 <h1 align="center">github-workflow</h1>
-<p align=center><i align="center">Repositório para testes de github workflow e scripts de automação.</i></p>
+<p align=center><i align="center">Repositório para testes de github workflow e scripts de automação</i></p>
 
 <br>
 
 <div align="center">
 
-<a href="https://docs.github.com/pt/actions"><img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=plastic&logo=githubactions&logoColor=white" height="20" alt="GithubActions"/></a>
+<a href="https://docs.github.com/pt/actions"><img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=plastic&logo=githubactions&logoColor=white" height="22" alt="GithubActions"/></a>
 
-<a href=""><img src="https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg?style=plastic" height="20" alt="Maintenance-actively-developed"/></a>
-<a href=""><img src="https://img.shields.io/github/last-commit/dexdevlab/github-workflow?style=plastic" height="20" alt="LastCommit"/></a>
-<a href=""><img src="https://snyk.io/test/github/dexdevlab/github-workflow/badge.svg?style=plastic" height="20" alt="Snyk"/></a>
+<a href=""><img src="https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg?style=plastic" height="22" alt="Maintenance-actively-developed"/></a>
+<a href=""><img src="https://img.shields.io/github/last-commit/dexdevlab/github-workflow?style=plastic" height="22" alt="LastCommit"/></a>
+<a href=""><img src="https://snyk.io/test/github/dexdevlab/github-workflow/badge.svg?style=plastic" height="22" alt="Snyk"/></a>
 
-<a href=""><img src="https://img.shields.io/github/languages/code-size/dexdevlab/github-workflow?style=plastic" height="20" alt="CodeSize"/></a>
-<a href=""><img src="https://img.shields.io/github/repo-size/dexdevlab/github-workflow?style=plastic" height="20" alt="RepoSize"/></a>
-<a href=""><img src="https://img.shields.io/github/contributors/dexdevlab/github-workflow?style=plastic" height="20" alt="Contributors"></a>
+<a href=""><img src="https://img.shields.io/github/languages/code-size/dexdevlab/github-workflow?style=plastic" height="22" alt="CodeSize"/></a>
+<a href=""><img src="https://img.shields.io/github/repo-size/dexdevlab/github-workflow?style=plastic" height="22" alt="RepoSize"/></a>
+<a href=""><img src="https://img.shields.io/github/contributors/dexdevlab/github-workflow?style=plastic" height="22" alt="Contributors"></a>
 
-<a href=""><img src="https://img.shields.io/github/forks/dexdevlab/github-workflow?style=plastic" height="20" alt="Fork"></a>
-<a href=""><img src="https://img.shields.io/badge/version-1.0.2-140126?style=plastic" height="20" alt="Version"/></a>
-<a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="20" alt="License"/></a>
+<a href=""><img src="https://img.shields.io/github/forks/dexdevlab/github-workflow?style=plastic" height="22" alt="Fork"></a>
+<a href=""><img src="https://img.shields.io/badge/version-1.0.4-140126?style=plastic" height="22" alt="Version"/></a>
+<a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="22" alt="License"/></a>
 
-|| [Conteúdo](#section-conteudo) || [Primeiros passos](#section-primeirospassos) || [Notas de versão](#section-changelog) ||
+|| [Conteúdo](#section-conteudo) || [Instruções](#section-instrucoes) || [Notas de versão](#section-changelog) ||
 
 || [Autores](#section-autores) || [Contato](#section-contato) || [Licença](#section-licenca) ||
 
@@ -55,9 +55,9 @@ Este repositório também conta com alguns templates que podem ser facilmente ut
 
 <hr>
 
-<a name="section-primeirospassos">
+<a name="section-instrucoes">
 
-## Primeiros passos
+## Instruções
 
 </a>
 
@@ -100,6 +100,10 @@ Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<
 ## Notas de versão
 
 </a>
+
+### v1.0.4-230310
+
+- Atualização da documentação
 
 ### v1.0.3-230309
 
