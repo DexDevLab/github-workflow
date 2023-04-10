@@ -1,8 +1,8 @@
 {
   "name": "github-workflow",
-  "version": "v1.0.4-230310",
+  "version": "v1.0.5-230410",
   "license": "MIT",
-  "description": "Repositório para testes de github workflow e scripts de automação",
+  "description": "Repositório para testes de Github Workflow e scripts de automação do Github Actions",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

@@ -1,5 +1,7 @@
-<h1 align="center">github-workflow</h1>
-<p align=center><i align="center">Repositório para testes de github workflow e scripts de automação</i></p>
+<img src="./assets/thumb.png" alt="Print">
+
+<h1 align="center">Github Workflow Actions Template</h1>
+<p align=center><i align="center">Repositório para testes de Github Workflow e scripts de automação do Github Actions</i></p>
 
 <br>
 
@@ -16,7 +18,7 @@
 <a href=""><img src="https://img.shields.io/github/contributors/dexdevlab/github-workflow?style=plastic" height="22" alt="Contributors"></a>
 
 <a href=""><img src="https://img.shields.io/github/forks/dexdevlab/github-workflow?style=plastic" height="22" alt="Fork"></a>
-<a href=""><img src="https://img.shields.io/badge/version-1.0.4-140126?style=plastic" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/badge/version-1.1.0-140126?style=plastic" height="22" alt="Version"/></a>
 <a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="22" alt="License"/></a>
 
 || [Conteúdo](#section-conteudo) || [Instruções](#section-instrucoes) || [Notas de versão](#section-changelog) ||
@@ -49,7 +51,7 @@ Este repositório também conta com alguns templates que podem ser facilmente ut
 
 'changelog-release' - Gera um changelog para cada release realizado.
 
-'tag-release' - Cria automaticamente uma Tag, e então uma release, respeitando Versionamento Semântico, de acordo com o critério especificado. No template, a ação ocorre em cada 'push' realizado no branch 'main', e ignora automaticamente quaisquer versões do projeto que possuam o sufixo '-beta'. Requer um arquivo [`package.json`](https://github.com/dexdevlab/github-workflow/blob/main/package.json) para funcionar corretamente. Em caso de se utilizar outro sufixo indicador de versão como excludente, é possível substituir a variável `SUFFIX` por qualquer outro valor.
+'tag-release' - Cria automaticamente uma Tag, e então uma release, respeitando Versionamento Semântico, de acordo com o critério especificado. No template, a ação ocorre em cada 'push' realizado no branch 'main', e ignora automaticamente quaisquer versões do projeto que possuam o sufixo 'beta'. Requer um arquivo [`package.json`](https://github.com/dexdevlab/github-workflow/blob/main/package.json) para funcionar corretamente. Em caso de se utilizar outro sufixo indicador de versão como excludente, é possível substituir a variável `SUFFIX` por qualquer outro valor.
 
 'tag+release' - Versão alternativa do script acima. Se utiliza de 2 workflows independentes que se executam de maneira procedural. Funciona também como um exemplo desse tipo de implementação. Para mais informações, leia as [instruções](https://github.com/dexdevlab/github-workflow/blob/main/templates/tag+release/instructions.md) do template.
 
@@ -100,6 +102,11 @@ Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<
 ## Notas de versão
 
 </a>
+
+### v1.1.0-230410
+
+- Ajuste no sufixo, removendo a hifenação para "beta" nas versões semânticas
+- Atualização da documentação
 
 ### v1.0.4-230310
 
