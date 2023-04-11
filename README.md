@@ -1,4 +1,6 @@
-<img src="./assets/thumb.png" alt="Print">
+<div align="center">
+<img src="./assets/thumb.png" height='300px' width='600px' alt="Print">
+</div>
 
 <h1 align="center">Github Workflow Actions Template</h1>
 <p align=center><i align="center">Repositório para testes de Github Workflow e scripts de automação do Github Actions</i></p>
@@ -102,6 +104,11 @@ Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<
 ## Notas de versão
 
 </a>
+
+### v1.2.0-230411
+
+- Ajuste no sufixo, devolvendo a hifenação para "beta" nas versões semânticas
+- Atualização da documentação
 
 ### v1.1.0-230410
 

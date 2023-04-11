@@ -1,6 +1,6 @@
 {
   "name": "github-workflow",
-  "version": "v1.0.5-230410",
+  "version": "v1.2.0-230411",
   "license": "MIT",
   "description": "Repositório para testes de Github Workflow e scripts de automação do Github Actions",
   "private": true,

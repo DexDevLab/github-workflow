@@ -1,4 +1,4 @@
-# AUTO RELEASE BASED ON A TAG NAME. IT REQUIRES A TAG ALREADY CREATED. TAGS WITH "beta" SUFFIX
+# AUTO RELEASE BASED ON A TAG NAME. IT REQUIRES A TAG ALREADY CREATED. TAGS WITH "-beta" SUFFIX
 # WILL NOT BE CONSIDERED.
 
 name: Release
@@ -8,7 +8,7 @@ on:
     types: [actions-release]
 
 env:
-  SUFFIX: beta
+  SUFFIX: -beta
 
 jobs:
   release:
