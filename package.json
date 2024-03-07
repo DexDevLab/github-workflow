@@ -1,10 +1,13 @@
 {
   "name": "github-workflow",
-  "version": "v1.2.0-230411",
+  "version": "v2.0.0-240307",
   "license": "MIT",
   "description": "Repositório para testes de Github Workflow e scripts de automação do Github Actions",
   "private": true,
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "caniuse": "yarn upgrade --save caniuse-lite browserslist",
+    "clean": "yarn autoclean --force",
+    "git:clear": "bash cleargitcache.sh"
   }
 }

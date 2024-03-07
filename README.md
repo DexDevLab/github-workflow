@@ -5,22 +5,23 @@
 <h1 align="center">Github Workflow Actions Template</h1>
 <p align=center><i align="center">Repositório para testes de Github Workflow e scripts de automação do Github Actions</i></p>
 
+<h2 align=center>REPOSITÓRIO TRANSFERIDO: O conteúdo deste repositório não será mais atualizado e foi transferido para ser mantido <a href="https://github.com/DexDevLab/github-repo-template">aqui</a>.</p>
+
 <br>
 
 <div align="center">
 
 <a href="https://docs.github.com/pt/actions"><img src="https://img.shields.io/badge/github%20actions-%232671E5.svg?style=plastic&logo=githubactions&logoColor=white" height="22" alt="GithubActions"/></a>
 
-<a href=""><img src="https://img.shields.io/badge/maintenance-actively--developed-brightgreen.svg?style=plastic" height="22" alt="Maintenance-actively-developed"/></a>
+<a href=""><img src="https://img.shields.io/badge/maintenance-deprecated-red.svg" height="22" alt="Maintenance-deprecated"/></a>
 <a href=""><img src="https://img.shields.io/github/last-commit/dexdevlab/github-workflow?style=plastic" height="22" alt="LastCommit"/></a>
-<a href=""><img src="https://snyk.io/test/github/dexdevlab/github-workflow/badge.svg?style=plastic" height="22" alt="Snyk"/></a>
 
 <a href=""><img src="https://img.shields.io/github/languages/code-size/dexdevlab/github-workflow?style=plastic" height="22" alt="CodeSize"/></a>
 <a href=""><img src="https://img.shields.io/github/repo-size/dexdevlab/github-workflow?style=plastic" height="22" alt="RepoSize"/></a>
 <a href=""><img src="https://img.shields.io/github/contributors/dexdevlab/github-workflow?style=plastic" height="22" alt="Contributors"></a>
 
 <a href=""><img src="https://img.shields.io/github/forks/dexdevlab/github-workflow?style=plastic" height="22" alt="Fork"></a>
-<a href=""><img src="https://img.shields.io/badge/version-1.1.0-140126?style=plastic" height="22" alt="Version"/></a>
+<a href=""><img src="https://img.shields.io/github/v/release/dexdevlab/github-workflow" height="22" alt="Version"/></a>
 <a href="https://github.com/dexdevlab/github-workflow/blob/main/LICENSE"><img src="https://img.shields.io/github/license/dexdevlab/github-workflow?&style=plastic" height="22" alt="License"/></a>
 
 || [Conteúdo](#section-conteudo) || [Instruções](#section-instrucoes) || [Notas de versão](#section-changelog) ||
@@ -91,7 +92,7 @@ Você também pode ficar à vontade e baixar individualmente cada template naveg
 
 É obrigatório realizar este ajuste em qualquer repositório onde deseja que seu workflow funcione, para se certificar de que ele tenha as permissões necessárias para executar suas etapas.
 
-Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<NOME_DO_USUARIO>/<NOME_DO_REPOSITORIO>/settings/actions') e faça os seguintes ajustes:
+Vá nas Configurações Gerais de Ações do repositório (`<https://github.com/><NOME_DO_USUARIO>/<NOME_DO_REPOSITORIO>/settings/actions`) e faça os seguintes ajustes:
 
 1 - Marque 'Allow all actions and reusable workflows' em 'Actions permissions'
 
@@ -104,6 +105,15 @@ Vá nas Configurações Gerais de Ações do repositório ('https://github.com/<
 ## Notas de versão
 
 </a>
+
+### v2.0.0-240307
+
+- Descontinuação do repositório e transferência do seu conteúdo
+- Atualização da documentação
+- Ajuste na sintaxe do script do GitHub Actions
+- Adição de script de limpeza do Yarn para dependências
+- Adição de script de limpeza para o cache do git quando arquivos continuarem a ser monitorados mesmo depois de desvinculados
+- Removido monitoramento do Snyk para este repositório
 
 ### v1.2.0-230411
 
